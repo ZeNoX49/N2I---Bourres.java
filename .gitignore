@@ -1,0 +1,6 @@
+vendor/
+.env
+composer.json
+composer.lock
+assets/image/uploads/
+.idea
