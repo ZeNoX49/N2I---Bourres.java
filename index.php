@@ -1,18 +1,19 @@
 <?php
-if (session_status() !== PHP_SESSION_ACTIVE) {
-    session_start();
-}
+session_start();
 
-function dispatch() {
+define('ROOT_PATH', __DIR__ . '/');
 
-    $action = $_GET['action'] ?? 'exemple';
+require __DIR__ . '/vendor/autoload.php';
 
-    $parts = explode('/', $action);
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
-    // ucfirst() capitalizes the first letter
-    $controllerName = $parts[0] . 'Controller';
+function dispatch()
+{ //dispatcher les action sur les controller
 
-    $method = $parts[1] ?? 'show';
+    $action = isset($_GET['action']) ? $_GET['action'] : 'exemple';
+
+    $controllerName = $action . 'Controller';
 
     $controllerFile = "app/controller/$controllerName.php";
 
@@ -24,11 +25,7 @@ function dispatch() {
 
     $controller = new $controllerName();
 
-    if (!method_exists($controller, $method)) {
-        die("Method $method not found in $controllerName.");
-    }
-
-    $controller->$method();
+    $controller->show();
 }
 
 dispatch();
