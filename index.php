@@ -9,16 +9,11 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
 function dispatch()
-{ //dispatcher les actions sur les controller
+{ //dispatcher les action sur les controller
 
     $action = isset($_GET['action']) ? $_GET['action'] : 'exemple';
 
-    $parts = explode('/', $action);
-
-    // ucfirst() capitalizes the first letter
-    $controllerName = $parts[0] . 'Controller';
-
-    $method = isset($parts[1]) ? $parts[1] : 'show';
+    $controllerName = $action . 'Controller';
 
     $controllerFile = "app/controller/$controllerName.php";
 
@@ -30,11 +25,7 @@ function dispatch()
 
     $controller = new $controllerName();
 
-    if (!method_exists($controller, $method)) {
-        die("Method $method not found in $controllerName.");
-    }
-
-    $controller->$method();
+    $controller->show();
 }
 
 dispatch();

@@ -1,6 +1,6 @@
 <?php
 
-class SnakeController
+class snakeController
 {
     public function show()
     {
