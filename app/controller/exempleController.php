@@ -1,6 +1,6 @@
 <?php
 
-require_once "app/model/exempleModel.php";
+require_once $_ENV['BONUS_PATH']."app/model/exempleModel.php";
 
 class exempleController
 {
