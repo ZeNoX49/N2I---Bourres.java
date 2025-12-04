@@ -1,11 +1,14 @@
 <?php
 
-require_once $_ENV['BONUS_PATH']."app/model/exempleModel.php";
+require_once "app/model/exempleModel.php";
 
 class exempleController
 {
     public function show()
     {
-        include $_ENV['BONUS_PATH']."app/view/exempleView.php";
+        $title = "Exemple";
+        include "app/view/header.php";
+        include "app/view/exempleView.php";
+        include "app/view/footer.php";
     }
 }
