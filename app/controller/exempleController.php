@@ -1,7 +1,5 @@
 <?php
 
-require_once "app/model/exempleModel.php";
-
 class exempleController
 {
     public function show()
