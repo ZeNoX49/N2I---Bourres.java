@@ -8,7 +8,8 @@ require __DIR__ . '/vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-function dispatch() {
+function dispatch()
+{ //dispatcher les actions sur les controller
 
     $action = isset($_GET['action']) ? $_GET['action'] : 'exemple';
 
