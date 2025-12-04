@@ -5,5 +5,6 @@
     <a href="?action=dialogue/show&type=ide">MAISON IDE</a>
     <a href="?action=dialogue/show&type=audio">MAISON Audio</a>
     <a href="?action=dialogue/show&type=video">MAISON Video</a>
-    <a href="?action=dialogue/show&type=video">MAISON Video</a>
+    <a href="?action=snake/show">Arbre</a>
+    <a href="?action=lasergame/show">Cible</a>
 </div>
