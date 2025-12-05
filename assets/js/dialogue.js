@@ -1,4 +1,6 @@
 let dialoguesData = null;
+const dicoStyle = {"mbureautique": "dialogueorange.png", "mide":"dialogueviolet.png", "mos": "dialoguebleu.png",
+  "mdessin":"dialoguejaune.png", "mmedia":"dialoguevert.png", "mrgpd": "dialoguerouge.png", "mnird":"dialoguefontaine.png"};
 
 
 fetch('assets/json/dialogues.json')
@@ -30,7 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
         titreEl.textContent = infos.titre;
         texteEl.innerText = infos.conv[etapeActuelle].text;
        //avatarEl.src = 'assets/image/persos/' + infos.conv[etapeActuelle].image + '.jpg';
+        dialog.sty
         dialog.id = clePerso;
+        dialog.style.backgroundImage = 'url(assets/image/' + dicoStyle[clePerso] + ')';
         dialog.showModal();
       }
     });

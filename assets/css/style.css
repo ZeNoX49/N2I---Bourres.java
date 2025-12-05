@@ -71,9 +71,9 @@ dialog::backdrop {
     margin: 0;
     overflow: visible;
     width: 100%;
-    position: relative;
     transform: translateY(100%);
     transition: transform 0.3s cubic-bezier(0.4, 1.0, 0.2, 1);
+    background-size: 100% 100%;
 }
 
 html,
