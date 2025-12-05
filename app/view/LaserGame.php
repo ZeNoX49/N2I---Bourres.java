@@ -16,6 +16,17 @@
             padding:30px; border-radius:12px; min-width:250px; text-align:center;
             font-family:'Press Start 2P', monospace; image-rendering: pixelated;">
 
+    <button id="back-btn"
+            style="background: linear-gradient(145deg, #6b4a4a, #8e5e5e);
+                   border: 3px solid #4a2e2e; color:#311515; font-weight:bold;
+                   padding:12px 20px; cursor:pointer; font-size:0.75rem;
+                   text-transform:uppercase; letter-spacing:1px; font-family:'Press Start 2P';
+                   box-shadow:4px 4px 0 #1a1a1a, inset 0 1px 2px rgba(255,255,255,0.2);
+                   border-radius:6px; image-rendering:pixelated; width:100%; margin-bottom:10px;"
+            onclick="window.history.back()">
+        ← RETOUR
+    </button>
+
     <button id="start-game"
             style="background: linear-gradient(145deg, #5e2d2d, #8f5454);
                    border: 3px solid #5a2e2e; color:#230f0f; font-weight:bold;

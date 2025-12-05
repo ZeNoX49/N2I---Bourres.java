@@ -5,7 +5,6 @@ class Lasergame {
         this.timeLeft = 42;
         this.gameActive = false;
         this.enemies = document.querySelectorAll('.enemy, [data-enemy]');
-        console.log('Lasergame chargé !', this.enemies.length, 'ennemis');
         this.init();
     }
 
@@ -26,7 +25,8 @@ class Lasergame {
 
 
     startGame() {
-        console.log('Démarrage');
+        document.getElementById('game-ui').classList.add('start-to-corner');
+
         this.gameActive = true;
         document.body.classList.add('game-active');
         document.getElementById('game-ui').style.display = 'block';
@@ -102,7 +102,6 @@ class Lasergame {
 
             enemyEl.classList.add('hit');
             setTimeout(() => enemyEl.classList.add('dead'), 500);
-            console.log(`Touché +${points} Total: ${this.score}`);
         }
     }
 
@@ -111,7 +110,6 @@ class Lasergame {
         const aliveEnemies = Array.from(this.enemies).filter(el => !el.classList.contains('dead'));
         if (aliveEnemies.length > 0) {
             this.takeDamage(15);
-            console.log('Counter');
         }
     }
 
@@ -203,7 +201,7 @@ class Lasergame {
     }
 
     quitGame() {
-        window.location.href = '/Bourrés.java/index.php?action=lasergame/show';
+        window.location.href = 'index.php?action=home';
     }
 
 
