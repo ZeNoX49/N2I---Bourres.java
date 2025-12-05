@@ -3,11 +3,9 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
     session_start();
 }
 
+function dispatch() { //dispatcher les action sur les controller
 
-function dispatch()
-{ //dispatcher les action sur les controller
-
-    $action = isset($_GET['action']) ? $_GET['action'] : 'exemple';
+    $action =$_GET['action'] ?? 'startPage';
 
     $controllerName = $action . 'Controller';
 
