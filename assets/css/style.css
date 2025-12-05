@@ -5,3 +5,10 @@
     cursor: pointer;
 }
 
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+
+    backdrop-filter: blur(8px);
+
+
+}
