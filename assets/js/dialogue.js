@@ -1,7 +1,5 @@
-// On déclare une variable pour stocker les données une fois chargées
 let dialoguesData = null;
 
-// 1. On charge le fichier JSON dès le début
 
 fetch('assets/json/dialogues.json')
     .then(response => response.json())

@@ -12,7 +12,6 @@ dialog::backdrop {
 }
 
 
-/* --- Le conteneur du Dialog Rétro --- */
 .dialog-bottom {
     position: fixed;
     bottom: 0;
@@ -34,7 +33,6 @@ html, body {
 
 
 
-/* Quand le dialog est ouvert, il remonte */
 .dialog-bottom[open] {
     transform: translateY(0);
 }
@@ -51,7 +49,6 @@ html, body {
     left: 30px;
 }
 
-/* Si on met un avatar, on décale le texte pour ne pas qu'il passe dessous */
 .avatar-flottant + .contenu-dialog {
     margin-left: 100px;
 }
