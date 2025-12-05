@@ -32,7 +32,6 @@ usort($scores, function ($a, $b) {
 });
 $scores = array_slice($scores, 0, 20);
 
-// sauvegarde
 file_put_contents($file, json_encode($scores, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 
 echo json_encode(['status' => 'ok', 'scores' => $scores]);

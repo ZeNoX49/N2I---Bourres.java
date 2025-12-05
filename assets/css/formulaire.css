@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("assets/image/background-final.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+#modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+#modal-box {
+    background: #dcdcdc;
+    padding: 20px;
+    width: 260px;
+    box-sizing: border-box;
+}
+
+.ligne {
+    background: #666;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+}
+
+.ligne input,
+.ligne textarea {
+    width: 100%;
+    border: none;
+    background: transparent;
+    color: #fff;
+    text-align: center;
+    outline: none;
+    font: inherit;
+}
+
+.ligne textarea {
+    resize: none;
+}
+
+#envoyer-btn {
+    background: #777;
+    color: #000;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    font: inherit;
+}
+
+/* Formulaire modale */
+#modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#modal-box {
+    position: relative;
+    width: 400px;
+    max-width: 90%;
+    padding: 20px;
+    background-image: url("../image/parchemin.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    image-rendering: pixelated;
+    border: 4px solid #4CAF50;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    font-family: 'Press Start 2P', cursive;
+    color: #000;
+    text-align: center;
+}
+
+#modal-box .ligne {
+    margin-bottom: 15px;
+}
+
+#modal-box input[type="text"],
+#modal-box input[type="email"],
+#modal-box textarea {
+    width: 100%;
+    padding: 10px;
+    border: 3px solid #000;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.8);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    image-rendering: pixelated;
+}
+
+#modal-box textarea {
+    resize: none;
+}
+
+#modal-box button#envoyer-btn {
+    width: 100%;
+    padding: 12px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    background-color: #4CAF50;
+    border: 4px solid #000;
+    color: #000;
+    cursor: pointer;
+    image-rendering: pixelated;
+    transition: all 0.2s ease;
+}
+
+#modal-box button#envoyer-btn:hover {
+    background-color: #fff;
+    color: #4CAF50;
+    transform: scale(1.05);
+}
+
+#message {
+    font-size: 10px;
+    color: #000;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#gif-box img {
+    max-width: 100%;
+    margin: 10px 0;
+    image-rendering: pixelated;
+    border: 2px solid #000;
+}

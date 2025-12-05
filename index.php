@@ -1,12 +1,17 @@
 <?php
 if (session_status() !== PHP_SESSION_ACTIVE) {
     session_start();
+    $_SESSION["nb_tentavives_form"] = 0;
+    $_SESSION["nb_snake_point"] = 0;
+    $_SESSION["nb_lasergame_point"] = 0;
+    $_SESSION["required_snake_point"] = 0;
+    $_SESSION["required_lasergame_point"] = 0;
 }
 
 function dispatch()
-{ //dispatcher les action sur les controller
+{
 
-    $action = $_GET['action'] ?? 'startPage';
+    $action = isset($_GET['action']) ? $_GET['action'] : 'startPage';
 
     // On garde uniquement la partie avant le slash
     $parts = explode('/', $action);

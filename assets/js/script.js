@@ -38,9 +38,8 @@ class Lasergame {
         document.addEventListener('click', (e) => this.shoot(e));
 
         this.timer = setInterval(() => this.updateTimer(), 1000);
-        this.riposteInterval = setInterval(() => this.enemyRiposte(), 2000);
-
-        this.spawnInterval = setInterval(() => this.spawnEnemy(), 2000);
+        this.riposteInterval = setInterval(() => this.enemyRiposte(), 800 + Math.random() * 1600);
+        this.spawnInterval = setInterval(() => this.spawnEnemy(), 450 + Math.random() * 900);
 
         for (let i = 0; i < 3; i++) this.spawnEnemy();
     }
@@ -89,7 +88,7 @@ class Lasergame {
         cursor.style.transform = 'translate(-50%,-50%) scale(1.3) rotate(10deg)';
         setTimeout(() => {
             cursor.style.transform = 'translate(-50%,-50%)';
-        }, 150);
+        }, 50);
 
         const target = document.elementFromPoint(e.clientX, e.clientY);
         let enemyEl = target?.closest('.enemy, [data-enemy]');
@@ -101,7 +100,7 @@ class Lasergame {
             this.updateUI();
 
             enemyEl.classList.add('hit');
-            setTimeout(() => enemyEl.classList.add('dead'), 500);
+            setTimeout(() => enemyEl.classList.add('dead'), 200);
         }
     }
 
@@ -139,6 +138,14 @@ class Lasergame {
         clearInterval(this.timer);
         clearInterval(this.riposteInterval);
         clearInterval(this.spawnInterval);
+
+        let cookies = document.cookie.split("; ");
+        let scoreCookie = cookies.find(row => row.startsWith("lasergame_score="));
+        let ancienScore = scoreCookie ? parseInt(scoreCookie.split("=")[1]) : 0;
+        // Comparaison
+        if (this.score > ancienScore) {
+            document.cookie = "lasergame_score=" + this.score + "; path=/";
+        }
 
         document.getElementById('final-score').textContent = this.score;
         document.getElementById('game-over').style.display = 'block';
