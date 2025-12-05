@@ -1,0 +1,87 @@
+body {
+    background-color: #202020;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 60px;
+    font-size: 1.5rem;
+    text-shadow: 4px 4px #000;
+    color: #4CAF50;
+}
+
+.tree-link {
+    display: block;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.tree-link:hover {
+    transform: scale(1.1);
+}
+
+/* Pixel Art Tree using box-shadow */
+.pixel-tree {
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    color: #2ecc71;
+    /* Leaves color */
+    position: relative;
+
+    /* 
+       Pixel Art Grid (10px blocks)
+       Coordinate system relative to the center top
+    */
+    box-shadow:
+        /* Top Layer */
+        0 0 0 0 #2ecc71,
+
+        /* Second Layer */
+        -10px 10px 0 0 #2ecc71,
+        0 10px 0 0 #2ecc71,
+        10px 10px 0 0 #2ecc71,
+
+        /* Third Layer */
+        -20px 20px 0 0 #2ecc71,
+        -10px 20px 0 0 #2ecc71,
+        0 20px 0 0 #2ecc71,
+        10px 20px 0 0 #2ecc71,
+        20px 20px 0 0 #2ecc71,
+
+        /* Fourth Layer */
+        -30px 30px 0 0 #2ecc71,
+        -20px 30px 0 0 #2ecc71,
+        -10px 30px 0 0 #2ecc71,
+        0 30px 0 0 #2ecc71,
+        10px 30px 0 0 #2ecc71,
+        20px 30px 0 0 #2ecc71,
+        30px 30px 0 0 #2ecc71,
+
+        /* Trunk */
+        -5px 40px 0 0 #795548,
+        5px 40px 0 0 #795548,
+        -5px 50px 0 0 #795548,
+        5px 50px 0 0 #795548;
+
+    transform: scale(4);
+    /* Scale up the 10px pixels */
+    margin-bottom: 50px;
+    /* Space for the scaled shadow */
+}
