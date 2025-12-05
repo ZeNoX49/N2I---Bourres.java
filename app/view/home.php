@@ -1,10 +1,11 @@
+<link rel="stylesheet" href="assets/css/music.css"> 
 <div class="village">
     <a class="hsnake" href="?action=snake"></a>
     <a class="hlasergame" href="?action=lasergame"></a>
     <a class="hformulair" href="?action=formulaire"></a>
     <a class="hmusic" href="?action=music"></a>
-    <button id="musicBtn" class="music-button">
-        <img src="assets/image/music-icon.png" alt="🔊" width="50" height="50">
+    <button id="musicBtn">
+        🔊
     </button>
     <script src="assets/js/music.js"></script>
     <div class="container">
