@@ -2,7 +2,7 @@ class Lasergame {
     constructor() {
         this.score = 0;
         this.hp = 100;
-        this.timeLeft = 5;
+        this.timeLeft = 42;
         this.gameActive = false;
         this.enemies = document.querySelectorAll('.enemy, [data-enemy]');
         console.log('Lasergame chargé !', this.enemies.length, 'ennemis');

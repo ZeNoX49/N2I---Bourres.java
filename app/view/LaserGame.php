@@ -9,21 +9,29 @@
 <body>
 
 <div id="game-ui"
-     style="position:fixed; top:10px; right:10px; z-index:9999;
-            background:rgba(0,0,0,0.8); color:white;
-            padding:15px; border-radius:8px;">
+     style="position:fixed; top:50%; left:50%; transform:translate(-50%,-50%);
+            background: linear-gradient(145deg, #3d2424, #1f1111);
+            border: 4px solid #5e2c2c; box-shadow:
+                0 0 0 2px #522828, inset 0 0 20px rgba(0,0,0,0.7), 12px 12px 0 #261010;
+            padding:30px; border-radius:12px; min-width:250px; text-align:center;
+            font-family:'Press Start 2P', monospace; image-rendering: pixelated;">
+
     <button id="start-game"
-            style="background:#4CAF50; color:white; border:none;
-                   padding:10px 15px; cursor:pointer;">
-        Activer Laser Game
+            style="background: linear-gradient(145deg, #5e2d2d, #8f5454);
+                   border: 3px solid #5a2e2e; color:#230f0f; font-weight:bold;
+                   padding:18px 30px; cursor:pointer; font-size:0.9rem;
+                   text-transform:uppercase; letter-spacing:2px; font-family:'Press Start 2P';
+                   box-shadow:6px 6px 0 #311515, inset 0 2px 4px rgba(255,255,255,0.3);
+                   border-radius:8px; image-rendering:pixelated; width:100%;">
+         START GAME
     </button>
-    <div id="game-info" style="margin-top:10px; display:none;">
-        <div>Score: <span id="score">0</span> |
-            Vie: <span id="hp">100</span> |
-            Temps: <span id="timer">60</span>s</div>
+
+    <div id="game-info" style="margin-top:20px; display:none; font-size:0.7rem; color: white">
+        <div>Score: <span id="score">0</span> | Vie: <span id="hp">100</span> | Temps: <span id="timer">60</span>s</div>
         <div id="leaderboard"></div>
     </div>
 </div>
+
 
 <div id="weapon-cursor"
      style="display:none; position:fixed; width:40px; height:40px;
@@ -55,9 +63,6 @@
         </div>
     </div>
 </div>
-
-
-<?php include   'assets/html/footer.html'; ?>
 
 <script src="assets/js/script.js"></script>
 </body>
