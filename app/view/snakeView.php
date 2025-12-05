@@ -11,6 +11,9 @@
 
 <body>
     <?php include 'app/view/header.php'; ?>
+    <?php if (!isset($title) || $title !== "Accueil"): ?>
+        <button onclick="window.location.href='?action=home'" class="btn-retour">Retour</button>
+    <?php endif; ?>
 
     <div class="main-container">
         <div class="game-wrapper">
