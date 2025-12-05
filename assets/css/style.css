@@ -56,7 +56,7 @@ html, body {
 }
 
 .village {
-    background-image: url("../image/MA BITE£.png");
+    background-image: url("../image/background-final.png");
     background-size: cover;          /* L’image remplit la page */
     background-position: center;     /* Le milieu de l’image = le milieu de l’écran */
     background-repeat: no-repeat;
@@ -65,4 +65,32 @@ html, body {
     height: 100vh;
 
     position: relative;
+}
+
+.mbureautique {
+    position: absolute;
+    top: 180px;
+    left: 1008px;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.mos {
+    position: absolute;
+    top: 158px;
+    left: 486px;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
 }
