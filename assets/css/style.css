@@ -9,6 +9,49 @@ dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.4);
 
     backdrop-filter: blur(8px);
+}
 
 
+/* --- Le conteneur du Dialog Rétro --- */
+.dialog-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0; right: 0;
+    top: auto;
+    margin: 0;
+    overflow: visible;
+    width: 100%;
+
+    position: relative;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+    transform: translateY(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+/* Quand le dialog est ouvert, il remonte */
+.dialog-bottom[open] {
+    transform: translateY(0);
+}
+
+
+
+
+.avatar-flottant {
+    display: block ;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: -40px;
+    left: 30px;
+}
+
+/* Si on met un avatar, on décale le texte pour ne pas qu'il passe dessous */
+.avatar-flottant + .contenu-dialog {
+    margin-left: 100px;
 }

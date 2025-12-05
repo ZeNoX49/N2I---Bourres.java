@@ -1,16 +1,14 @@
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+
 <div class="village">
-    <a href="?action=dialogue/show&type=bureautique">MAISON bureautique</a>
-    <a href="?action=dialogue/show&type=os">MAISON OS</a>
-    <a href="?action=dialogue/show&type=dessin">MAISON Dessin</a>
-    <a href="?action=dialogue/show&type=ide">MAISON IDE</a>
-    <a href="?action=dialogue/show&type=audio">MAISON Audio</a>
-    <a href="?action=dialogue/show&type=video">MAISON Video</a>
-    <a href="?action=snake/show">Arbre</a>
-    <a href="?action=lasergame/show">Cible</a>
+    <a class="mbureautique" href="?action=dialogue/show&type=bureautique">MAISON bureautique</a>
+    <a class="mos" href="?action=dialogue/show&type=os">MAISON OS</a>
+    <a class="mdessin" href="?action=dialogue/show&type=dessin">MAISON Dessin</a>
+    <a class="mide" href="?action=dialogue/show&type=ide">MAISON IDE</a>
+    <a class="mmedia" href="?action=dialogue/show&type=media">MAISON Media</a>
+    <a class="mrgpd" href="?action=dialogue/show&type=rgpd">MAISON Rgpd</a>
+    <a class="hsnake" href="?action=snake/show">Arbre</a>
+    <a class="hlasergame" href="?action=lasergame/show">Cible</a>
+    <a class="hformulair" href="?action=formulaire/show">Formulaire</a>
 </div>
 
 
@@ -28,10 +26,14 @@
     </button>
 </div>
 
-<dialog id="monPopup">
-    <h2 id="popupTitre"></h2>
-    <div id="popupTexte"></div>
-    <form method="dialog"><button>Fermer</button></form>
+<dialog id="monPopup" class="dialog-bottom">
+    <img id="popupAvatar" class="avatar-flottant" src="" alt="Avatar">
+    <div class="contenu-dialog">
+        <h2 id="popupTitre"></h2>
+        <div id="popupTexte"></div>
+        <form method="dialog"><button>Fermer</button></form>
+    </div>
+
 </dialog>
 
 
