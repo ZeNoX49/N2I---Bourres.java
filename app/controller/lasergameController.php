@@ -1,7 +1,5 @@
 <?php
 
-
-
 class lasergameController
 {
     public function show()

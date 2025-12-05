@@ -147,7 +147,6 @@ class Lasergame {
     }
 
 
-
     saveScore() {
         const input = document.getElementById('player-name');
         const name  = (input.value || '').trim();
