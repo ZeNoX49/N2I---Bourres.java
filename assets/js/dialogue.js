@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (infos) {
         titreEl.textContent = infos.titre;
         texteEl.innerText = infos.conv[etapeActuelle].text;
-        avatarEl.src = 'assets/img/persos/' + infos.conv[etapeActuelle].image + '.jpg';
+        avatarEl.src = 'assets/image/persos/' + infos.conv[etapeActuelle].image + '.jpg';
         dialog.id = clePerso;
         dialog.showModal();
       }
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         etapeActuelle++;
         console.log(infos.conv[etapeActuelle]);
         texteEl.innerText = infos.conv[etapeActuelle].text;
-        avatarEl.src = 'assets/img/persos/' + infos.conv[etapeActuelle].image + '.jpg';
+        avatarEl.src = 'assets/image/persos/' + infos.conv[etapeActuelle].image + '.jpg';
         dialog.showModal();
       }
       else {
