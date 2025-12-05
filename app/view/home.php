@@ -4,9 +4,7 @@
     <a class="hlasergame" href="?action=lasergame"></a>
     <a class="hformulair" href="?action=formulaire"></a>
     <a class="hmusic" href="?action=music"></a>
-    <button id="musicBtn">
-        🔊
-    </button>
+    <button id="musicBtn">🔊</button>
     <script src="assets/js/music.js"></script>
     <div class="container">
         <button class="btn-dialog mbureautique" data-perso="mbureautique">
