@@ -1,6 +1,48 @@
+
+
 body {
+    font-family: 'Press Start 2P', cursive;
     image-rendering: pixelated;
 }
+
+.startpage {
+    background-image: url("../image/océan.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-start {
+    display: flex; /* permet de centrer le texte */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 600px; /* mets la taille EXACTE du cadre */
+    height: 250px;
+
+    background-image: url("../image/bouton-jouer.png"); /* ton cadre */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    color: #000; /* couleur du texte (bleu foncé) */
+    font-size: 52px; /* à ajuster */
+
+    image-rendering: pixelated;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
 
 .btn-dialog {
     background: none;
@@ -43,12 +85,9 @@ body {
 }
 
 
-
 .dialog-bottom[open] {
     transform: translateY(0);
 }
-
-
 
 
 .avatar-flottant {
@@ -60,7 +99,7 @@ body {
     left: 30px;
 }
 
-.avatar-flottant+.contenu-dialog {
+.avatar-flottant + .contenu-dialog {
     margin-left: 100px;
 }
 
@@ -115,6 +154,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    image-rendering: pixelated;
 
     border: none;
     cursor: pointer;
@@ -130,6 +170,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    image-rendering: pixelated;
 
     border: none;
     cursor: pointer;
@@ -145,6 +186,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    image-rendering: pixelated;
 
     border: none;
     cursor: pointer;
@@ -160,6 +202,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    image-rendering: pixelated;
 
     border: none;
     cursor: pointer;
@@ -175,6 +218,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    image-rendering: pixelated;
 
     border: none;
     cursor: pointer;
@@ -190,6 +234,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    image-rendering: pixelated;
 
     border: none;
     cursor: pointer;
@@ -205,6 +250,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    image-rendering: pixelated;
 
     border: none;
     cursor: pointer;
