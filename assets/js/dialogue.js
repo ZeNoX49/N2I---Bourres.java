@@ -4,8 +4,7 @@ let dialoguesData = null;
 fetch('assets/json/dialogues.json')
     .then(response => response.json())
     .then(data => {
-      dialoguesData = data; // On stocke les données reçues
-      console.log("Données chargées !", data);
+      dialoguesData = data;
     })
     .catch(error => console.error('Erreur de chargement JSON:', error));
 
