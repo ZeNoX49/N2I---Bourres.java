@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const dialog = document.getElementById('monPopup');
   const titreEl = document.getElementById('popupTitre');
   const texteEl = document.getElementById('popupTexte');
-
+  const avatarEl = document.getElementById('popupAvatar');
   document.querySelectorAll('.btn-dialog').forEach(btn => {
     console.log("coucou");
     btn.addEventListener('click', () => {
@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (infos) {
         titreEl.textContent = infos.titre;
         texteEl.innerText = infos.text;
+        avatarEl.src = 'assets/img/persos/' + clePerso + '.jpg';
         dialog.showModal();
       }
     });

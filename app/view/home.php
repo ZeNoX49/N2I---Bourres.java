@@ -28,10 +28,14 @@
     </button>
 </div>
 
-<dialog id="monPopup">
-    <h2 id="popupTitre"></h2>
-    <div id="popupTexte"></div>
-    <form method="dialog"><button>Fermer</button></form>
+<dialog id="monPopup" class="dialog-bottom">
+    <img id="popupAvatar" class="avatar-flottant" src="" alt="Avatar">
+    <div class="contenu-dialog">
+        <h2 id="popupTitre"></h2>
+        <div id="popupTexte"></div>
+        <form method="dialog"><button>Fermer</button></form>
+    </div>
+
 </dialog>
 
 
