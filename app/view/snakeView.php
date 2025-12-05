@@ -10,8 +10,6 @@
 </head>
 
 <body>
-    <?php include 'app/view/header.php'; ?>
-
     <div class="main-container">
         <div class="game-wrapper">
             <div class="score-board">SCORE: <span id="score">0</span></div>
@@ -19,8 +17,7 @@
             <div class="controls-hint">USE ARROW KEYS</div>
         </div>
     </div>
-
-    <?php include 'app/view/footer.php'; ?>
+    
     <script src="assets/js/snake.js"></script>
 </body>
 

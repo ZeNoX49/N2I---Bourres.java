@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="assets/css/style-lasergame.css">
     <title>Lasergame</title>
 </head>
-<body>
 
+<body>
 <div id="game-ui"
      style="position:fixed; top:10px; right:10px; z-index:9999;
             background:rgba(0,0,0,0.8); color:white;
@@ -55,9 +55,6 @@
         </div>
     </div>
 </div>
-
-
-<?php include   'assets/html/footer.html'; ?>
 
 <script src="assets/js/script.js"></script>
 </body>

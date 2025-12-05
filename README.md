@@ -1,4 +1,4 @@
 # N2I - Bourre.java
 
 ## Consignes
-- hreh : index.php?action={fichier}/show
+- href : index.php?action={fichier}/show

@@ -1,4 +1,2 @@
-vendor/
-.env
-assets/image/uploads/
 .idea
+omg.py

@@ -10,16 +10,12 @@
 </head>
 
 <body>
-    <?php include 'app/view/header.php'; ?>
-
     <div class="main-container">
         <h1>Clique sur l'arbre...</h1>
         <a href="index.php?action=snake" class="tree-link" title="Jouer au Snake">
             <div class="pixel-tree"></div>
         </a>
     </div>
-
-    <?php include 'app/view/footer.php'; ?>
 </body>
 
 </html>
