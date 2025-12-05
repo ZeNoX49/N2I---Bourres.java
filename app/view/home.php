@@ -12,27 +12,27 @@
 
 <!-- Exemple de Yanis pour Théo -->
 <div class="container">
-    <button class="btn-dialog mide" data-perso="Panoramix">
+    <button class="btn-dialog mide" data-perso="mide">
         <img src="assets/img/monTheoAMOA.jpg"
              alt="Ouvrir le dialogue de Panoramix"
              width="100" height="100">
     </button>
-    <button class="btn-dialog mos" data-perso="Cétautomatix">
+    <button class="btn-dialog mos" data-perso="mos">
         <img src="assets/img/monTheoAMOA.jpg"
              alt="Ouvrir le dialogue de Assurancetourix"
              width="100" height="100">
     </button>
-    <button class="btn-dialog mdessin" data-perso="Astérix & Obélix">
+    <button class="btn-dialog mdessin" data-perso="mdessin">
         <img src="assets/img/monTheoAMOA.jpg"
              alt="Ouvrir le dialogue de Assurancetourix"
              width="100" height="100">
     </button>
-    <button class="btn-dialog mmedia" data-perso="Falbala">
+    <button class="btn-dialog mmedia" data-perso="mmedia">
         <img src="assets/img/monTheoAMOA.jpg"
              alt="Ouvrir le dialogue de Assurancetourix"
              width="100" height="100">
     </button>
-    <button class="btn-dialog mrgpd" data-perso="Ordralfabétix">
+    <button class="btn-dialog mrgpd" data-perso="mrgpd">
         <img src="assets/img/monTheoAMOA.jpg"
              alt="Ouvrir le dialogue de Assurancetourix"
              width="100" height="100">

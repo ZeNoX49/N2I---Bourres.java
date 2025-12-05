@@ -1,5 +1,5 @@
 {
-  "Panoramix": {
+  "mide": {
     "titre": "La tavern'IDE VSCode",
     "text": "Mes amis, pour concocter une application web efficace et légère, pas besoin de solution coûteuse  comme la suite JetBrains.[Afficher le logo JetBrains]\nLe secret est dans l'outil libre, comme VSCode.[Afficher le logo VSCode] \nIl permet à chaque établissement scolaire de devenir autonome et de co-construire sa solution a l'aide d'une grande quantité d'extension faite par la communauté pour la communauté. C'est comme pour la Guilde des Druides et c'est ça l'essence du NIRD !"
   },
@@ -11,15 +11,15 @@
     "titre": "Explication de NIRD",
     "text": "Par Bélénos, Bonnemine ! Face à toutes ses licences écrasante de leur prix et de leur poids dans leur marché, ces Romains nous on mis en difficulté, Mais avec le NIRD, le Numérique Inclusif, Responsable et Durable, ces écoles sont à l'image de notre beau village : Irréductible ! \n Exactement, mon Cochonnet ! Cette méthode c'est comme la potion magique ! \nElle permet de réemployer le matériel, promouvoir les logiciels libre comme Linux pour lutter contre l'obsolescence programmée , et s'assurer que nos données ne partent pas hors de l'UE! C'est la voie vers l'autonomie et l'écoresponsabilité!"
   },
-  "Falbala": {
+  "mmedia": {
     "titre": "La Vate Vidéaste",
     "text": "Quelle horreur ces abonnements indispensables et ces écosystèmes fermés ! L'Empire des GAFAM de César veut contrôler notre créativité ! Pour un Numérique Durable, je passe à KdenLive ! C'est la solution pour mutualiser les ressources et co-construire des outils ouverts avec les autres membres de la communauté, je ne cautionne pas l'obsolescence programmée ! Surtout quand c'est pour justifier l'achat de la nouvelle version encore plus cher..."
   },
-  "Ordralfabétix": {
+  "mrgpd": {
     "titre": "Le Poissonnier de la donnée prône la RGPD",
     "text": "Mais ils sont fous ses Romains ! Ils stockent nos données n'importe où, même hors de l'UE? C'est comme le poisson, il faut qu'il soit frais et qu'on sache d'où il vient ! Avec la démarche NIRD, on favorise les solutions locales, ouvertes et autonomes pour un numérique plus éthique! Pas de poisson pas frais ni de données qui se baladent !"
   },
-  "Cétautomatix": {
+  "mos": {
     "titre": "La Forge de l'OS",
     "text": "Moi, je dis qu'il y a urgence à agir contre la dépendance structurelle ! Rendre mon matériel obsolète juste parce qu'ils arrêtent le support de Windows ? Jamais ! Notre village résiste en favorisant le réemploi ! On installe LibreOffice et Linux, c'est la voie pour un Numérique Responsable et Durable qui renforce l'autonomie technologique ! Je suis toujours pas dépassé, alors pourquoi le matos le serait ?"
   },
@@ -27,7 +27,7 @@
     "titre": "Le Doyen de la Bureautique",
     "text": "Mes chers amis, pourquoi payer une fortune pour des licences Microsoft 365 quand on peut utiliser LibreOffice ? C'est un logiciel libre, léger et complet qui permet de créer des documents, des feuilles de calcul et des présentations sans se ruiner. Avec LibreOffice, chaque école peut être autonome et responsable dans sa gestion numérique, tout en respectant la vie privée de ses utilisateurs !"
   },
-  "Astérix & Obélix": {
+  "mdessin": {
     "titre": "Les Guerriers du Dessin Libre",
     "text": "C'est pas possible ! Tu dessines encore tes menhirs sur cette tablette qui ne veut rien laisser sortir ? C'est un écosystème fermé, ça ! Une vraie garnison romaine ! \n  Ouïe ! Tu as raison, il me faut toujours une licence coûteuse  pour exporter en bonne qualité. Mais que faire ? \n  Passe à Krita ! Il est libre de droit, on peut le mettre sur toutes nos machines, même celles que l'Empire veut rendre obsolètes ! C'est l'esprit de résistance des gaulois mais surtout l'esprit de résistance numérique propre à NIRD !"
   }
