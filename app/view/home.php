@@ -8,3 +8,20 @@
     <a href="?action=snake/show">Arbre</a>
     <a href="?action=lasergame/show">Cible</a>
 </div>
+
+
+<!-- Exemple de Yanis pour Théo -->
+<div class="container">
+    <button class="btn-dialog" data-perso="Panoramix">
+        coucou panoramix
+    </button>
+</div>
+
+<dialog id="monPopup">
+    <h2 id="popupTitre"></h2>
+    <div id="popupTexte"></div>
+    <form method="dialog"><button>Fermer</button></form>
+</dialog>
+
+
+<script src="assets/js/dialogue.js"></script>
