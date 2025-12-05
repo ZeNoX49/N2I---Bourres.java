@@ -1,12 +1,12 @@
 
 <div class="village">
-    <a class="mdessin" href="?action=dialogue/show&type=dessin">MAISON Dessin</a>
-    <a class="mide" href="?action=dialogue/show&type=ide">MAISON IDE</a>
-    <a class="mmedia" href="?action=dialogue/show&type=media">MAISON Media</a>
-    <a class="mrgpd" href="?action=dialogue/show&type=rgpd">MAISON Rgpd</a>
-    <a class="hsnake" href="?action=snake/show">Arbre</a>
-    <a class="hlasergame" href="?action=lasergame/show">Cible</a>
-    <a class="hformulair" href="?action=formulaire/show">Formulaire</a>
+    <a class="mdessin" href="?action=dialogue&type=dessin">MAISON Dessin</a>
+    <a class="mide" href="?action=dialogue&type=ide">MAISON IDE</a>
+    <a class="mmedia" href="?action=dialogue&type=media">MAISON Media</a>
+    <a class="mrgpd" href="?action=dialogue&type=rgpd">MAISON Rgpd</a>
+    <a class="hsnake" href="?action=snake">Arbre</a>
+    <a class="hlasergame" href="?action=lasergame">Cible</a>
+    <a class="hformulair" href="?action=formulaire">Formulaire</a>
 
 
 
