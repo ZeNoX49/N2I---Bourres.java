@@ -158,6 +158,14 @@ function checkCollision() {
 }
 
 function resetGame() {
+    let cookies = document.cookie.split("; ");
+    let scoreCookie = cookies.find(row => row.startsWith("snake_score="));
+    let ancienScore = scoreCookie ? parseInt(scoreCookie.split("=")[1]) : 0;
+    // Comparaison
+    if (score > ancienScore) {
+        document.cookie = "snake_score=" + score + "; path=/";
+    }
+
     playSound('die');
     alert('Game Over! Score: ' + score);
     snake = [{ x: 10, y: 10 }];

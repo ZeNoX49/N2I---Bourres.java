@@ -139,6 +139,14 @@ class Lasergame {
         clearInterval(this.riposteInterval);
         clearInterval(this.spawnInterval);
 
+        let cookies = document.cookie.split("; ");
+        let scoreCookie = cookies.find(row => row.startsWith("lasergame_score="));
+        let ancienScore = scoreCookie ? parseInt(scoreCookie.split("=")[1]) : 0;
+        // Comparaison
+        if (this.score > ancienScore) {
+            document.cookie = "lasergame_score=" + this.score + "; path=/";
+        }
+
         document.getElementById('final-score').textContent = this.score;
         document.getElementById('game-over').style.display = 'block';
     }
