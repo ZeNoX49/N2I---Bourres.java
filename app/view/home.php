@@ -1,7 +1,5 @@
 
 <div class="village">
-    <a class="mbureautique" href="?action=dialogue/show&type=bureautique">MAISON bureautique</a>
-    <a class="mos" href="?action=dialogue/show&type=os">MAISON OS</a>
     <a class="mdessin" href="?action=dialogue/show&type=dessin">MAISON Dessin</a>
     <a class="mide" href="?action=dialogue/show&type=ide">MAISON IDE</a>
     <a class="mmedia" href="?action=dialogue/show&type=media">MAISON Media</a>
@@ -14,12 +12,12 @@
 
 <!-- Exemple de Yanis pour Théo -->
 <div class="container">
-    <button class="btn-dialog" data-perso="Panoramix">
+    <button class="btn-dialog mbureautique" data-perso="Panoramix">
         <img src="assets/img/monTheoAMOA.jpg"
              alt="Ouvrir le dialogue de Panoramix"
              width="100" height="100">
     </button>
-    <button class="btn-dialog" data-perso="Assurancetourix">
+    <button class="btn-dialog mos" data-perso="Assurancetourix">
         <img src="assets/img/monTheoAMOA.jpg"
              alt="Ouvrir le dialogue de Assurancetourix"
              width="100" height="100">

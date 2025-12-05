@@ -1,12 +1,8 @@
 <?php
-session_start();
+if (session_status() !== PHP_SESSION_ACTIVE) {
+    session_start();
+}
 
-define('ROOT_PATH', __DIR__ . '/');
-
-require __DIR__ . '/vendor/autoload.php';
-
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
 
 function dispatch()
 { //dispatcher les action sur les controller
