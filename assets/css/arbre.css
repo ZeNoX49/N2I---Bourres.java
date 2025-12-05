@@ -36,19 +36,13 @@ h1 {
     transform: scale(1.1);
 }
 
-/* Pixel Art Tree using box-shadow */
 .pixel-tree {
     width: 10px;
     height: 10px;
     background: transparent;
     color: #2ecc71;
-    /* Leaves color */
     position: relative;
 
-    /* 
-       Pixel Art Grid (10px blocks)
-       Coordinate system relative to the center top
-    */
     box-shadow:
         /* Top Layer */
         0 0 0 0 #2ecc71,
@@ -81,7 +75,5 @@ h1 {
         5px 50px 0 0 #795548;
 
     transform: scale(4);
-    /* Scale up the 10px pixels */
     margin-bottom: 50px;
-    /* Space for the scaled shadow */
 }

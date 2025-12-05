@@ -1,6 +1,48 @@
+
+
 body {
+    font-family: 'Press Start 2P', cursive;
     image-rendering: pixelated;
 }
+
+.startpage {
+    background-image: url("../image/océan.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-start {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 600px;
+    height: 250px;
+
+    background-image: url("../image/bouton-jouer.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    color: #000;
+    font-size: 52px;
+
+    image-rendering: pixelated;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
 
 .btn-dialog {
     background: none;
@@ -29,9 +71,9 @@ dialog::backdrop {
     margin: 0;
     overflow: visible;
     width: 100%;
-    position: relative;
     transform: translateY(100%);
     transition: transform 0.3s cubic-bezier(0.4, 1.0, 0.2, 1);
+    background-size: 100% 100%;
 }
 
 html,
@@ -43,12 +85,9 @@ body {
 }
 
 
-
 .dialog-bottom[open] {
     transform: translateY(0);
 }
-
-
 
 
 .avatar-flottant {
@@ -60,16 +99,14 @@ body {
     left: 30px;
 }
 
-.avatar-flottant+.contenu-dialog {
+.avatar-flottant + .contenu-dialog {
     margin-left: 100px;
 }
 
 .village {
     background-image: url("../image/background-final.png");
     background-size: cover;
-    /* L’image remplit la page */
     background-position: center;
-    /* Le milieu de l’image = le milieu de l’écran */
     background-repeat: no-repeat;
 
     width: 100vw;
@@ -115,6 +152,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    image-rendering: pixelated;
 
     border: none;
     cursor: pointer;
@@ -130,6 +168,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    image-rendering: pixelated;
 
     border: none;
     cursor: pointer;
@@ -145,6 +184,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    image-rendering: pixelated;
 
     border: none;
     cursor: pointer;
@@ -160,6 +200,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    image-rendering: pixelated;
 
     border: none;
     cursor: pointer;
@@ -175,6 +216,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    image-rendering: pixelated;
 
     border: none;
     cursor: pointer;
@@ -190,6 +232,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    image-rendering: pixelated;
 
     border: none;
     cursor: pointer;
@@ -197,7 +240,6 @@ body {
 }
 
 .mnird {
-    /*nird*/
     position: absolute;
     top: 37.5%;
     left: 53%;
@@ -205,6 +247,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    image-rendering: pixelated;
 
     border: none;
     cursor: pointer;
