@@ -50,6 +50,5 @@ document.addEventListener('DOMContentLoaded', () => {
         etapeActuelle = 0;
         dialog.close();
       }
-
   });
 });

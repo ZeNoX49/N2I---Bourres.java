@@ -1,3 +1,6 @@
+<a class="hsnake" href="?action=snake">Arbre</a>
+<a class="hlasergame" href="?action=lasergame">Cible</a>
+<a class="hformulair" href="?action=formulaire">Formulaire</a>
 
 <div class="village">
 <div class="container">
