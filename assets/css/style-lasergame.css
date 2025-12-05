@@ -8,6 +8,7 @@ body.game-active {
     transition: all 0.3s ease;
     border: 2px solid yellow;
     transition: all 0.3s ease; border: 2px solid yellow;
+    image-rendering: pixelated;
 }
 .enemy.hit {
     opacity: 0.3; transform: scale(0.8); filter: grayscale(100%);
