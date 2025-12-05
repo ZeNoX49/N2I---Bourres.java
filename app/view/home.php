@@ -1,9 +1,9 @@
 <audio id="musique-celtique" src="assets/audio/celtic_music.mp3" preload="auto">
     </audio>
 <div class="village">
-    <a class="hsnake" href="?action=snake"></a>
-    <a class="hlasergame" href="?action=lasergame"></a>
-    <a class="hformulair" href="?action=formulaire"></a>
+    <a class="hsnake" href="snake"></a>
+    <a class="hlasergame" href="lasergame"></a>
+    <a class="hformulair" href="formulaire"></a>
     <div class="container">
         <button class="btn-dialog mbureautique" data-perso="mbureautique">
             <img src="assets/image/maison-orange.png"
