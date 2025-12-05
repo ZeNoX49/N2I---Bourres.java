@@ -38,9 +38,8 @@ class Lasergame {
         document.addEventListener('click', (e) => this.shoot(e));
 
         this.timer = setInterval(() => this.updateTimer(), 1000);
-        this.riposteInterval = setInterval(() => this.enemyRiposte(), 2000);
-
-        this.spawnInterval = setInterval(() => this.spawnEnemy(), 2000);
+        this.riposteInterval = setInterval(() => this.enemyRiposte(), 500 + Math.random() * 1000);
+        this.spawnInterval = setInterval(() => this.spawnEnemy(), 250 + Math.random() * 500);
 
         for (let i = 0; i < 3; i++) this.spawnEnemy();
     }
