@@ -7,11 +7,15 @@ body {
     border: none;
     padding: 0;
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-dialog:hover {
+    transform: scale(1.05);
 }
 
 dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.4);
-
     backdrop-filter: blur(8px);
 }
 
@@ -201,6 +205,7 @@ body {
     cursor: pointer;
     background-color: transparent;
 }
+
 .hformulair {
     position: absolute;
     top: 80.5%;
@@ -218,6 +223,7 @@ body {
     cursor: pointer;
     background-color: transparent;
 }
+
 .hsnake {
     position: absolute;
     top: 18.2%;
@@ -235,15 +241,17 @@ body {
     cursor: pointer;
     background-color: transparent;
 }
+
 .hsnake:hover {
     background-image: url("../image/omgunserpent.png");
 }
+
 .hlasergame {
     position: absolute;
     top: 41%;
     left: 29%;
 
-    width:60px;
+    width: 60px;
     height: 60px;
     background-image: url("../image/cible.png");
     background-size: contain;
