@@ -29,6 +29,8 @@ dialog::backdrop {
 html, body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -51,4 +53,16 @@ html, body {
 
 .avatar-flottant + .contenu-dialog {
     margin-left: 100px;
+}
+
+.village {
+    background-image: url("../image/MA BITE£.png");
+    background-size: cover;          /* L’image remplit la page */
+    background-position: center;     /* Le milieu de l’image = le milieu de l’écran */
+    background-repeat: no-repeat;
+
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
 }
