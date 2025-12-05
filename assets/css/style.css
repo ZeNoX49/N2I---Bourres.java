@@ -108,3 +108,31 @@ html, body {
     cursor: pointer;
     background-color: transparent;
 }
+
+.mdessin { /*jaune*/
+    position: absolute;
+    top: 30.6%;
+    left: 77.2%;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.mmedia { /*verte*/
+    position: absolute;
+    top: 57.8%;
+    left: 73.8%;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}

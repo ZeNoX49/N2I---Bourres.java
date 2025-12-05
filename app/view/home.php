@@ -19,7 +19,7 @@
     <button class="btn-dialog mdessin" data-perso="mdessin">
         <img src="assets/image/maison-jaune.png"
              alt="Ouvrir le dialogue sur les logiciels de dessins"
-             width="100" height="100">
+             width="92" height="100">
     </button>
     <button class="btn-dialog mmedia" data-perso="mmedia">
         <img src="assets/image/maison-verte.png"
