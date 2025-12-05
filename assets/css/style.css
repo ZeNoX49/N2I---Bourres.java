@@ -1,5 +1,3 @@
-
-
 body {
     font-family: 'Press Start 2P', cursive;
     image-rendering: pixelated;
@@ -71,9 +69,16 @@ dialog::backdrop {
     margin: 0;
     overflow: visible;
     width: 100%;
+    max-width: none;
     transform: translateY(100%);
     transition: transform 0.3s cubic-bezier(0.4, 1.0, 0.2, 1);
     background-size: 100% 100%;
+    padding: 30px 4%;
+    box-sizing: border-box;
+}
+
+.dialog-bottom h2 {
+    margin: 0 0 20px 0;
 }
 
 html,
@@ -99,7 +104,7 @@ body {
     left: 30px;
 }
 
-.avatar-flottant + .contenu-dialog {
+.avatar-flottant+.contenu-dialog {
     margin-left: 100px;
 }
 
