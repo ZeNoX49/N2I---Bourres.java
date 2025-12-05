@@ -1,5 +1,6 @@
 body{
-    background: #7F9373;
+    background-image: url("../image/background-lasergame.png");
+    image-rendering: pixelated ;
 }
 
 body.game-active {
