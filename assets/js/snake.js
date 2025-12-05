@@ -6,8 +6,8 @@ const gridSize = 20;
 const tileCount = canvas.width / gridSize;
 
 let score = 0;
-let snake = [{x: 10, y: 10}];
-let food = {x: 15, y: 15};
+let snake = [{ x: 10, y: 10 }];
+let food = { x: 15, y: 15 };
 let dx = 0;
 let dy = 0;
 let gameSpeed = 100;
@@ -22,10 +22,10 @@ function playSound(type) {
     }
     const oscillator = audioCtx.createOscillator();
     const gainNode = audioCtx.createGain();
-    
+
     oscillator.connect(gainNode);
     gainNode.connect(audioCtx.destination);
-    
+
     if (type === 'eat') {
         oscillator.type = 'square';
         oscillator.frequency.setValueAtTime(440, audioCtx.currentTime);
@@ -47,12 +47,12 @@ function playSound(type) {
 
 function drawGame(currentTime) {
     window.requestAnimationFrame(drawGame);
-    
+
     const secondsSinceLastRender = (currentTime - lastTime) / 1000;
     if (secondsSinceLastRender < 1 / (1000 / gameSpeed)) return; // Control speed
-    
+
     lastTime = currentTime;
-    
+
     clearCanvas();
     moveSnake();
     checkCollision();
@@ -66,9 +66,46 @@ function clearCanvas() {
 }
 
 function drawSnake() {
-    ctx.fillStyle = '#4CAF50';
-    snake.forEach(part => {
+    snake.forEach((part, index) => {
+        ctx.fillStyle = '#4CAF50';
         ctx.fillRect(part.x * gridSize, part.y * gridSize, gridSize - 2, gridSize - 2);
+
+        // Draw tongue for head
+        if (index === 0 && (dx !== 0 || dy !== 0)) {
+            ctx.fillStyle = '#FF0000';
+            const tongueLength = 6;
+            const tongueWidth = 4;
+
+            let tx, ty, tw, th;
+
+            // Center of the head
+            const centerX = part.x * gridSize + (gridSize - 2) / 2;
+            const centerY = part.y * gridSize + (gridSize - 2) / 2;
+
+            if (dx === 1) { // Right
+                tx = part.x * gridSize + (gridSize - 2);
+                ty = centerY - tongueWidth / 2;
+                tw = tongueLength;
+                th = tongueWidth;
+            } else if (dx === -1) { // Left
+                tx = part.x * gridSize - tongueLength;
+                ty = centerY - tongueWidth / 2;
+                tw = tongueLength;
+                th = tongueWidth;
+            } else if (dy === 1) { // Down
+                tx = centerX - tongueWidth / 2;
+                ty = part.y * gridSize + (gridSize - 2);
+                tw = tongueWidth;
+                th = tongueLength;
+            } else if (dy === -1) { // Up
+                tx = centerX - tongueWidth / 2;
+                ty = part.y * gridSize - tongueLength;
+                tw = tongueWidth;
+                th = tongueLength;
+            }
+
+            ctx.fillRect(tx, ty, tw, th);
+        }
     });
 }
 
@@ -80,9 +117,9 @@ function drawFood() {
 function moveSnake() {
     if (dx === 0 && dy === 0) return;
 
-    const head = {x: snake[0].x + dx, y: snake[0].y + dy};
+    const head = { x: snake[0].x + dx, y: snake[0].y + dy };
     snake.unshift(head);
-    
+
     if (head.x === food.x && head.y === food.y) {
         score += 10;
         scoreElement.innerText = score;
@@ -106,12 +143,12 @@ function generateFood() {
 
 function checkCollision() {
     const head = snake[0];
-    
+
     // Wall collision
     if (head.x < 0 || head.x >= tileCount || head.y < 0 || head.y >= tileCount) {
         resetGame();
     }
-    
+
     // Self collision
     for (let i = 1; i < snake.length; i++) {
         if (head.x === snake[i].x && head.y === snake[i].y) {
@@ -123,8 +160,8 @@ function checkCollision() {
 function resetGame() {
     playSound('die');
     alert('Game Over! Score: ' + score);
-    snake = [{x: 10, y: 10}];
-    food = {x: 15, y: 15};
+    snake = [{ x: 10, y: 10 }];
+    food = { x: 15, y: 15 };
     dx = 0;
     dy = 0;
     score = 0;
@@ -139,13 +176,13 @@ function changeDirection(event) {
     const RIGHT_KEY = 39;
     const UP_KEY = 38;
     const DOWN_KEY = 40;
-    
+
     const keyPressed = event.keyCode;
     const goingUp = dy === -1;
     const goingDown = dy === 1;
     const goingRight = dx === 1;
     const goingLeft = dx === -1;
-    
+
     if (keyPressed === LEFT_KEY && !goingRight) {
         dx = -1;
         dy = 0;

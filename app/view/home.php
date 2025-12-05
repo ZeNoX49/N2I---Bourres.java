@@ -1,3 +1,5 @@
+<audio id="musique-celtique" src="assets/audio/celtic_music.mp3" preload="auto">
+    </audio>
 <div class="village">
     <a class="hsnake" href="?action=snake"></a>
     <a class="hlasergame" href="?action=lasergame"></a>

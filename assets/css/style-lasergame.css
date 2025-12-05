@@ -33,7 +33,7 @@ body.game-active {
 #game-ui.start-to-corner {
     position: fixed !important;
     top: 10px !important;
-    right: 10px !important;
+    left: 10px !important;
     transform: translate(0, 0) scale(0.8) !important;
     width: 240px !important;
     min-width: 240px !important;

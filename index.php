@@ -1,6 +1,11 @@
 <?php
 if (session_status() !== PHP_SESSION_ACTIVE) {
     session_start();
+    $_SESSION["nb_tentavives_form"] = 0;
+    $_SESSION["nb_snake_point"] = 0;
+    $_SESSION["nb_lasergame_point"] = 0;
+    $_SESSION["required_snake_point"] = 0;
+    $_SESSION["required_lasergame_point"] = 0;
 }
 
 function dispatch()
