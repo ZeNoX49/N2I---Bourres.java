@@ -2,28 +2,31 @@ class Lasergame {
     constructor() {
         this.score = 0;
         this.hp = 100;
-        this.timeLeft = 120;
+        this.timeLeft = 5;
         this.gameActive = false;
         this.enemies = document.querySelectorAll('.enemy, [data-enemy]');
-        console.log('🔫 Lasergame chargé !', this.enemies.length, 'ennemis');
+        console.log('Lasergame chargé !', this.enemies.length, 'ennemis');
         this.init();
     }
 
     init() {
-        const startBtn = document.getElementById('start-game');
-        const saveBtn = document.getElementById('save-score');
+        const startBtn   = document.getElementById('start-game');
+        const saveBtn    = document.getElementById('save-score');
         const restartBtn = document.getElementById('restart-game');
+        const quitBtn    = document.getElementById('quit-game');
 
-        if (startBtn) startBtn.onclick = () => this.startGame();
-        if (saveBtn) saveBtn.onclick = () => this.saveScore();
+        if (startBtn)   startBtn.onclick   = () => this.startGame();
+        if (saveBtn)    saveBtn.onclick    = () => this.saveScore();
         if (restartBtn) restartBtn.onclick = () => this.restartGame();
+        if (quitBtn)    quitBtn.onclick    = () => this.quitGame();
 
         this.showLeaderboard();
     }
 
 
+
     startGame() {
-        console.log('🚀 Démarrage !');
+        console.log('Démarrage');
         this.gameActive = true;
         document.body.classList.add('game-active');
         document.getElementById('game-ui').style.display = 'block';
@@ -36,7 +39,42 @@ class Lasergame {
 
         this.timer = setInterval(() => this.updateTimer(), 1000);
         this.riposteInterval = setInterval(() => this.enemyRiposte(), 2000);
+
+        this.spawnInterval = setInterval(() => this.spawnEnemy(), 2000);
+
+        for (let i = 0; i < 3; i++) this.spawnEnemy();
     }
+
+    restartGame() {
+        this.score     = 0;
+        this.hp        = 100;
+        this.timeLeft  = 60;
+        this.gameActive = false;
+
+        clearInterval(this.timer);
+        clearInterval(this.riposteInterval);
+        clearInterval(this.spawnInterval);
+
+        document.getElementById('score').textContent  = '0';
+        document.getElementById('hp').textContent     = '100';
+        document.getElementById('timer').textContent  = '60';
+
+        document.querySelectorAll('.enemy').forEach(e => e.remove());
+
+        document.getElementById('game-over').style.display  = 'none';
+        document.getElementById('save-score').style.display = 'block';
+        const endButtons = document.getElementById('end-buttons');
+        if (endButtons) endButtons.style.display = 'none';
+
+        const input = document.getElementById('player-name');
+        if (input) {
+            input.disabled = false;
+            input.value = '';
+        }
+
+        this.startGame();
+    }
+
 
     updateCursor(e) {
         const cursor = document.getElementById('weapon-cursor');
@@ -64,7 +102,7 @@ class Lasergame {
 
             enemyEl.classList.add('hit');
             setTimeout(() => enemyEl.classList.add('dead'), 500);
-            console.log(`💥 HIT ! +${points}pts | Total: ${this.score}`);
+            console.log(`Touché +${points} Total: ${this.score}`);
         }
     }
 
@@ -73,7 +111,7 @@ class Lasergame {
         const aliveEnemies = Array.from(this.enemies).filter(el => !el.classList.contains('dead'));
         if (aliveEnemies.length > 0) {
             this.takeDamage(15);
-            console.log('🔥 RIPOSTE !');
+            console.log('Counter');
         }
     }
 
@@ -91,6 +129,7 @@ class Lasergame {
         if (this.timeLeft <= 0) this.endGame();
     }
 
+
     updateUI() {
         document.getElementById('score').textContent = this.score;
         document.getElementById('hp').textContent = Math.max(0, this.hp);
@@ -101,31 +140,98 @@ class Lasergame {
         this.gameActive = false;
         clearInterval(this.timer);
         clearInterval(this.riposteInterval);
+        clearInterval(this.spawnInterval);
+
         document.getElementById('final-score').textContent = this.score;
         document.getElementById('game-over').style.display = 'block';
-        console.log('🏁 GAME OVER ! Score:', this.score);
     }
 
+
+
     saveScore() {
-        const name = document.getElementById('player-name').value || 'Anonyme';
-        const scores = JSON.parse(localStorage.getItem('lasergame-scores') || '[]');
-        scores.push({ name, score: this.score, date: new Date().toLocaleString() });
-        scores.sort((a,b) => b.score - a.score).slice(0,10);
-        localStorage.setItem('lasergame-scores', JSON.stringify(scores));
-        this.showLeaderboard();
-        document.getElementById('game-over').style.display = 'none';
+        const input = document.getElementById('player-name');
+        const name  = (input.value || '').trim();
+
+        if (!name) {
+            alert('Merci de saisir un pseudo avant de continuer.');
+            input.focus();
+            return;
+        }
+
+        const payload = { name, score: this.score };
+
+        fetch('/Bourrés.java/app/model/LasergameModel.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+        })
+
+
+            .then(res => res.json())
+            .then(data => {
+                if (data.status !== 'ok') {
+                    alert('Erreur enregistrement score');
+                    return;
+                }
+
+                localStorage.setItem('lasergame-scores', JSON.stringify(data.scores));
+                this.showLeaderboardFromArray(data.scores);
+
+                document.getElementById('save-score').style.display = 'none';
+                input.disabled = true;
+                const endButtons = document.getElementById('end-buttons');
+                if (endButtons) endButtons.style.display = 'block';
+            })
+            .catch(err => {
+                console.error(err);
+                alert('Erreur réseau pendant la sauvegarde du score');
+            });
+    }
+
+
+    showLeaderboardFromArray(scores) {
+        const div = document.getElementById('leaderboard');
+        if (!div) return;
+
+        div.innerHTML = scores.length
+            ? scores.map(s => `<div>${s.name} : ${s.score} pts</div>`).join('')
+            : 'Aucun score';
     }
 
     showLeaderboard() {
         const scores = JSON.parse(localStorage.getItem('lasergame-scores') || '[]');
-        document.getElementById('leaderboard').innerHTML =
-            scores.map(s => `<div style="margin:2px 0;">${s.name}: ${s.score}pts</div>`).join('') ||
-            'Aucun score enregistré';
+        this.showLeaderboardFromArray(scores);
     }
 
-    restartGame() {
-        location.reload();
+    quitGame() {
+        window.location.href = '/Bourrés.java/index.php?action=lasergame/show';
     }
+
+
+    spawnEnemy() {
+        if (!this.gameActive || this.timeLeft <= 0) return;
+
+        const container = document.querySelector('.main') || document.body;
+
+        const enemy = document.createElement('img');
+        enemy.classList.add('enemy');
+        enemy.dataset.enemy = String(50 + Math.floor(Math.random() * 151));
+        enemy.src = 'assets/image/cible.png';
+        enemy.style.position = 'absolute';
+
+        const maxX = window.innerWidth - 150;
+        const maxY = window.innerHeight - 200;
+        const x = Math.floor(Math.random() * maxX);
+        const y = Math.floor(Math.random() * maxY) + 80;
+
+        enemy.style.left = x + 'px';
+        enemy.style.top = y + 'px';
+
+        container.appendChild(enemy);
+
+        this.enemies = document.querySelectorAll('.enemy, [data-enemy]');
+    }
+
 }
 
 new Lasergame();

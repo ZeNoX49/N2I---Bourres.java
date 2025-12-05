@@ -1,7 +1,28 @@
-body.game-active { cursor: none !important; }
-.enemy { transition: all 0.3s ease; border: 2px solid yellow; }
-.enemy.hit { opacity: 0.3; transform: scale(0.8); filter: grayscale(100%); }
-.enemy.dead { display: none; }
-#weapon-cursor.shoot { transform: translate(-50%,-50%) scale(1.2) !important; }
-.damage-flash { animation: damageFlash 0.3s; }
-@keyframes damageFlash { 0%,100%{background:rgba(255,0,0,0.3);} 50%{background:rgba(255,0,0,0.8);} }
+body.game-active {
+    cursor: none !important;
+    }
+.enemy {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+    border: 2px solid yellow;
+    transition: all 0.3s ease; border: 2px solid yellow;
+}
+.enemy.hit {
+    opacity: 0.3; transform: scale(0.8); filter: grayscale(100%);
+    }
+.enemy.dead {
+    display: none;
+    }
+#weapon-cursor.shoot {
+    transform: translate(-50%,-50%) scale(1.2) !important;
+    }
+.damage-flash {
+    animation: damageFlash 0.3s;
+    }
+@keyframes damageFlash {
+    0%,100%{background:rgba(255,0,0,0.3);}
+    50%{background:rgba(255,0,0,0.8);}
+    }
+
