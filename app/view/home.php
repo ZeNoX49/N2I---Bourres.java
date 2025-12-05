@@ -7,7 +7,7 @@
     <a class="hsnake" href="?action=snake/show">Arbre</a>
     <a class="hlasergame" href="?action=lasergame/show">Cible</a>
     <a class="hformulair" href="?action=formulaire/show">Formulaire</a>
-</div>
+
 
 
 <!-- Exemple de Yanis pour Théo -->
@@ -34,5 +34,5 @@
 
 </dialog>
 
-
+</div>
 <script src="assets/js/dialogue.js"></script>
