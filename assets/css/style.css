@@ -168,3 +168,20 @@ html, body {
     cursor: pointer;
     background-color: transparent;
 }
+.hsnake {
+    position: absolute;
+    top: 80.5%;
+    left: 3%;
+
+    width: 80px;
+    height: 80px;
+    background-image: url("../image/parchemin.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    image-rendering: pixelated;
+
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}

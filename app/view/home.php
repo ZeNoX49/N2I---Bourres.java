@@ -1,5 +1,5 @@
 <div class="village">
-    <a class="hsnake" href="?action=snake">Arbre</a>
+    <a class="hsnake" href="?action=snake"></a>
     <a class="hlasergame" href="?action=lasergame">Cible</a>
     <a class="hformulair" href="?action=formulaire">Formulaire</a>
     <div class="container">
