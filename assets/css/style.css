@@ -1,3 +1,7 @@
+body {
+    image-rendering: pixelated;
+}
+
 .btn-dialog {
     background: none;
     border: none;
