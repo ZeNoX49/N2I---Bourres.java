@@ -10,7 +10,6 @@ fetch('assets/json/dialogues.json')
     })
     .catch(error => console.error('Erreur de chargement JSON:', error));
 
-// 2. Gestion des clics
 document.addEventListener('DOMContentLoaded', () => {
   const dialog = document.getElementById('monPopup');
   const titreEl = document.getElementById('popupTitre');
@@ -19,8 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let etapeActuelle = 0;
   document.querySelectorAll('.btn-dialog').forEach(btn => {
     btn.addEventListener('click', () => {
-
-      // Sécurité : on vérifie que les données sont bien arrivées
       if (!dialoguesData) {
         alert("Les dialogues chargent encore, réessayez dans une seconde !");
         return;
