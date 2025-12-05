@@ -10,7 +10,6 @@
 
 
 
-<!-- Exemple de Yanis pour Théo -->
 <div class="container">
     <button class="btn-dialog mide" data-perso="mide">
         <img src="assets/img/monTheoAMOA.jpg"
@@ -33,6 +32,11 @@
              width="100" height="100">
     </button>
     <button class="btn-dialog mrgpd" data-perso="mrgpd">
+        <img src="assets/img/monTheoAMOA.jpg"
+             alt="Ouvrir le dialogue de Assurancetourix"
+             width="100" height="100">
+    </button>
+    <button class="btn-dialog mnird" data-perso="mnird">
         <img src="assets/img/monTheoAMOA.jpg"
              alt="Ouvrir le dialogue de Assurancetourix"
              width="100" height="100">
