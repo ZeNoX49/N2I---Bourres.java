@@ -23,7 +23,7 @@
     </button>
     <button class="btn-dialog" data-perso="Assurancetourix">
         <img src="assets/img/monTheoAMOA.jpg"
-             alt="Ouvrir le dialogue de Panoramix"
+             alt="Ouvrir le dialogue de Assurancetourix"
              width="100" height="100">
     </button>
 </div>
