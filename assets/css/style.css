@@ -66,3 +66,31 @@ html, body {
 
     position: relative;
 }
+
+.mbureautique {
+    position: absolute;
+    top: 96px;
+    left: 672px;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.mos {
+    position: absolute;
+    top: 158px;
+    left: 486px;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
