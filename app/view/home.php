@@ -6,7 +6,7 @@
     <button id="musicBtn" class="music-button">
         <img src="assets/image/music-icon.png" alt="🔊" width="50" height="50">
     </button>
-    <script src="assets/js/music.js"></script>²
+    <script src="assets/js/music.js"></script>
     <div class="container">
         <button class="btn-dialog mbureautique" data-perso="mbureautique">
             <img src="assets/image/maison-orange.png"
