@@ -3,11 +3,14 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
     session_start();
 }
 
-function dispatch() { //dispatcher les action sur les controller
+function dispatch()
+{ //dispatcher les action sur les controller
 
-    $action =$_GET['action'] ?? 'startPage';
+    $action = $_GET['action'] ?? 'startPage';
 
-    $controllerName = $action . 'Controller';
+    // On garde uniquement la partie avant le slash
+    $parts = explode('/', $action);
+    $controllerName = $parts[0] . 'Controller';
 
     $controllerFile = "app/controller/$controllerName.php";
 
