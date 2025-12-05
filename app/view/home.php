@@ -1,15 +1,5 @@
 
 <div class="village">
-    <a class="mdessin" href="?action=dialogue&type=dessin">MAISON Dessin</a>
-    <a class="mide" href="?action=dialogue&type=ide">MAISON IDE</a>
-    <a class="mmedia" href="?action=dialogue&type=media">MAISON Media</a>
-    <a class="mrgpd" href="?action=dialogue&type=rgpd">MAISON Rgpd</a>
-    <a class="hsnake" href="?action=snake">Arbre</a>
-    <a class="hlasergame" href="?action=lasergame">Cible</a>
-    <a class="hformulair" href="?action=formulaire">Formulaire</a>
-
-
-
 <div class="container">
     <button class="btn-dialog mbureautique" data-perso="mbureautique">
         <img src="assets/image/maison-orange.png"

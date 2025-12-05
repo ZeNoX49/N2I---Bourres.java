@@ -67,10 +67,10 @@ html, body {
     position: relative;
 }
 
-.mide {
+.mide { /*violette*/
     position: absolute;
-    top: 180px;
-    left: 208px;
+    top: 12.2%;
+    left: 48%;
 
     background-size: contain;
     background-repeat: no-repeat;
