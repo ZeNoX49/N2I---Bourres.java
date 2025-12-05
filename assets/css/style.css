@@ -95,10 +95,10 @@ html, body {
     background-color: transparent;
 }
 
-.mos {
+.mos { /*bleue*/
     position: absolute;
-    top: 158px;
-    left: 486px;
+    top: 22.2%;
+    left: 36%;
 
     background-size: contain;
     background-repeat: no-repeat;

@@ -14,7 +14,7 @@
     <button class="btn-dialog mos" data-perso="mos">
         <img src="assets/image/maison-bleue.png"
              alt="Ouvrir le dialogue sur les logiciels d'audio"
-             width="100" height="100">
+             width="90" height="120">
     </button>
     <button class="btn-dialog mdessin" data-perso="mdessin">
         <img src="assets/image/maison-jaune.png"
