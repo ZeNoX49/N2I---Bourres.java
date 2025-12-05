@@ -9,7 +9,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 }
 
 function dispatch()
-{ //dispatcher les action sur les controller
+{
 
     $action = isset($_GET['action']) ? $_GET['action'] : 'startPage';
 
