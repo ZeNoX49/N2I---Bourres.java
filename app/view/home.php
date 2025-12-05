@@ -1,7 +1,7 @@
 <div class="village">
     <a class="hsnake" href="?action=snake"></a>
-    <a class="hlasergame" href="?action=lasergame">Cible</a>
-    <a class="hformulair" href="?action=formulaire">Formulaire</a>
+    <a class="hlasergame" href="?action=lasergame"></a>
+    <a class="hformulair" href="?action=formulaire"></a>
     <div class="container">
         <button class="btn-dialog mbureautique" data-perso="mbureautique">
             <img src="assets/image/maison-orange.png"
