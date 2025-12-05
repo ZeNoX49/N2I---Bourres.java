@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <?php include 'assets/html/header.html'; ?>
+    <?php include 'app/view/header.php'; ?>
 
     <div class="main-container">
         <h1>Clique sur l'arbre...</h1>
@@ -19,7 +19,7 @@
         </a>
     </div>
 
-    <?php include 'assets/html/footer.html'; ?>
+    <?php include 'app/view/footer.php'; ?>
 </body>
 
 </html>
