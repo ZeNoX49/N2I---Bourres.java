@@ -6,7 +6,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 function dispatch()
 { //dispatcher les action sur les controller
 
-    $action = isset($_GET['action']) ? $_GET['action'] : 'exemple';
+    $action = $_GET['action'] ?? 'startPage';
 
     // On garde uniquement la partie avant le slash
     $parts = explode('/', $action);

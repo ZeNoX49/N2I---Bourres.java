@@ -1,3 +1,7 @@
+body {
+    image-rendering: pixelated;
+}
+
 .btn-dialog {
     background: none;
     border: none;
@@ -50,9 +54,11 @@ body {
 }
 
 .village {
-    background-image: url("../image/MA BITE£.png");
+    background-image: url("../image/background-final.png");
     background-size: cover;
+    /* L’image remplit la page */
     background-position: center;
+    /* Le milieu de l’image = le milieu de l’écran */
     background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
@@ -80,4 +86,127 @@ body {
     background-color: #4CAF50;
     color: #000;
     box-shadow: 0 0 20px rgba(76, 175, 80, 0.8);
+}
+
+.mide {
+    /*violette*/
+    position: absolute;
+    top: 12.2%;
+    left: 48%;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.mbureautique {
+    /*orange*/
+    position: absolute;
+    top: 24.2%;
+    left: 66%;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.mos {
+    /*bleue*/
+    position: absolute;
+    top: 22.2%;
+    left: 36%;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.mdessin {
+    /*jaune*/
+    position: absolute;
+    top: 30.6%;
+    left: 77.2%;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.mmedia {
+    /*verte*/
+    position: absolute;
+    top: 57.8%;
+    left: 73.8%;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.mrgpd {
+    /*rouge*/
+    position: absolute;
+    top: 61.8%;
+    left: 32%;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.mnird {
+    /*nird*/
+    position: absolute;
+    top: 37.5%;
+    left: 53%;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.hsnake {
+    position: absolute;
+    top: 80.5%;
+    left: 3%;
+
+    width: 80px;
+    height: 80px;
+    background-image: url("../image/parchemin.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    image-rendering: pixelated;
+
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
 }
