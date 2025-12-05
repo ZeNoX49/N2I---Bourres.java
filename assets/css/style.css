@@ -67,10 +67,24 @@ html, body {
     position: relative;
 }
 
-.mbureautique {
+.mide {
     position: absolute;
     top: 180px;
-    left: 1008px;
+    left: 208px;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.mbureautique { /*orange*/
+    position: absolute;
+    top: 24.2%;
+    left: 66%;
 
     background-size: contain;
     background-repeat: no-repeat;
