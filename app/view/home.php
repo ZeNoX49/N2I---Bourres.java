@@ -18,17 +18,17 @@
     </button>
     <button class="btn-dialog mos" data-perso="mos">
         <img src="assets/image/maison-bleue.png"
-             alt="Ouvrir le dialogue de Assurancetourix"
+             alt="Ouvrir le dialogue sur les logiciels d'audio"
              width="100" height="100">
     </button>
     <button class="btn-dialog mdessin" data-perso="mdessin">
         <img src="assets/img/monTheoAMOA.jpg"
-             alt="Ouvrir le dialogue de Assurancetourix"
+             alt="Ouvrir le dialogue sur les logiciels de dessins"
              width="100" height="100">
     </button>
     <button class="btn-dialog mmedia" data-perso="mmedia">
         <img src="assets/img/monTheoAMOA.jpg"
-             alt="Ouvrir le dialogue de Assurancetourix"
+             alt="Ouvrir le dialogue sur les logiciels de Bureautique"
              width="100" height="100">
     </button>
     <button class="btn-dialog mrgpd" data-perso="mrgpd">
