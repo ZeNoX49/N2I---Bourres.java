@@ -1,3 +1,7 @@
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
 <div class="village">
     <a href="?action=dialogue/show&type=bureautique">MAISON bureautique</a>
     <a href="?action=dialogue/show&type=os">MAISON OS</a>
@@ -13,7 +17,14 @@
 <!-- Exemple de Yanis pour Théo -->
 <div class="container">
     <button class="btn-dialog" data-perso="Panoramix">
-        coucou panoramix
+        <img src="assets/img/monTheoAMOA.jpg"
+             alt="Ouvrir le dialogue de Panoramix"
+             width="100" height="100">
+    </button>
+    <button class="btn-dialog" data-perso="Assurancetourix">
+        <img src="assets/img/monTheoAMOA.jpg"
+             alt="Ouvrir le dialogue de Panoramix"
+             width="100" height="100">
     </button>
 </div>
 
